@@ -576,7 +576,14 @@ hacker@dojo:~$
 ```
 Okay, now you try it! In this level the flag is, as always, in /flag, but /challenge/catflag will instead read out /home/hacker/not-the-flag. Use the symlink, and fool it into giving you the flag!
 ### solve
-**Flag:** ``
+**Flag:** `pwn.college{8QRqAelMhVBKIBNbRT77YoqQEP_.QX5ETN1wyN1gjNzEzW}`
 ```
-
+hacker@commands~linking-files:~$ ls
+Desktop  Downloads  a  d  f  l  o
+hacker@commands~linking-files:~$ ln -s /flag /home/hacker/not-the-flag
+hacker@commands~linking-files:~$ ls
+Desktop  Downloads  a  d  f  l  not-the-flag  o
+hacker@commands~linking-files:~$ /challenge/catflag
+About to read out the /home/hacker/not-the-flag file!
+pwn.college{8QRqAelMhVBKIBNbRT77YoqQEP_.QX5ETN1wyN1gjNzEzW}
 ```
